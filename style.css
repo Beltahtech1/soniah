@@ -1,0 +1,88 @@
+/* General page styling */
+body {
+  background: linear-gradient(to right, #ff758c, #ff7eb3); /* romantic pink gradient */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: 'Cursive', sans-serif;
+  text-shadow: 2px 2px 5px #ff3e6c;
+}
+
+/* Navigation buttons */
+nav a {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #ff6f91;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+nav a:hover {
+  background: #ff3e6c;
+}
+
+/* Floating heart animation */
+.heart {
+  font-size: 5em;
+  animation: float 3s infinite ease-in-out;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px) scale(1.1); color: #ffdde1; }
+  100% { transform: translateY(0); }
+}
+
+/* Timeline styling */
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+.timeline li {
+  margin: 20px 0;
+  font-size: 1.3em;
+  color: #ffe5ec;
+}
+
+/* Love letter box */
+.love-letter {
+  margin: 50px auto;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #ff3e6c;
+}
+
+/* Signature effect for SONIAH BELTAH */
+.signature {
+  font-family: 'Cursive', sans-serif;
+  font-size: 2.5em;
+  color: #fff0f5;
+  text-shadow: 0 0 10px #ff3e6c, 0 0 20px #ff6f91;
+  animation: glow 2s infinite alternate;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  z-index: 999;
+}
+
+.signature.top {
+  top: 10px; /* middle top */
+}
+
+.signature.bottom {
+  bottom: 10px; /* middle bottom */
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff3e6c; }
+  to { text-shadow: 0 0 20px #ffdde1, 0 0 30px #ff6f91; }
+}

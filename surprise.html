@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise for Sonia</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      background: radial-gradient(circle at center, #fff0f6 60%, #99ccff 100%);
+      border: 15px solid transparent;
+      border-image: linear-gradient(45deg, #66b2ff, #3399ff, #66ccff, #99ccff);
+      border-image-slice: 1;
+      overflow-x: hidden;
+    }
+
+    h2 {
+      color: #e60073;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff99cc; }
+      to { text-shadow: 0 0 20px #ff3399, 0 0 30px #ff66b2; }
+    }
+
+    /* Envelope */
+    .envelope {
+      position: relative;
+      display: inline-block;
+      margin-top: 40px;
+      width: 320px;
+      height: 220px;
+      background: #fff;
+      border: 2px solid #e60073;
+      box-shadow: 0 0 20px rgba(255, 102, 178, 0.6);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .envelope::before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 160px solid transparent;
+      border-right: 160px solid transparent;
+      border-bottom: 110px solid #e60073;
+    }
+
+    .message {
+      padding: 20px;
+      font-size: 1.2em;
+      color: #333;
+      display: none; /* hidden until typing starts */
+      white-space: pre-line;
+    }
+
+    /* Modern button */
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: linear-gradient(135deg, #3399ff, #66ccff);
+      color: #fff;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 40px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(51, 153, 255, 0.6);
+    }
+
+    .btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 25px rgba(51, 153, 255, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <h2>Surprise from Beltah to Soniah 🎉💖✨🌹</h2>
+
+  <div class="envelope">
+    <div class="message" id="secretMessage"></div>
+  </div>
+
+  <button class="btn" id="openBtn">Open Me 💌</button>
+
+  <script>
+    const messageText = "💌 Roses are red, violets are blue,\nMy heart is forever yours, Sonia,\nit beats for you 💕🌹💫✨😍";
+    const messageElement = document.getElementById("secretMessage");
+    const button = document.getElementById("openBtn");
+
+    function typeMessage(text, element, callback) {
+      element.style.display = "block";
+      let i = 0;
+      function typing() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(typing, 70); // typing speed
+        } else {
+          callback();
+        }
+      }
+      typing();
+    }
+
+    button.addEventListener("click", () => {
+      button.disabled = true;
+      typeMessage(messageText, messageElement, () => {
+        button.textContent = "Home 🏠";
+        button.onclick = () => window.location.href = "index.html";
+        button.disabled = false;
+      });
+    });
+  </script>
+</body>
+</html>

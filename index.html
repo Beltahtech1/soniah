@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Valentine’s Day Sonia ❤️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      background: #fff0f5;
+      color: #d6336c;
+      margin: 0;
+      padding: 2em;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    .button-container {
+      margin-top: 2em;
+    }
+    button, nav a {
+      background: linear-gradient(135deg, #ff4d6d, #ff85a2);
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      color: white;
+      cursor: pointer;
+      margin: 10px;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    button:hover, nav a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+    }
+    nav {
+      margin-top: 2em;
+      display: none; /* hidden until Yes is clicked */
+    }
+    .heart {
+      font-size: 3em;
+      margin-top: 1em;
+    }
+    .message {
+      margin-top: 1.5em;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Valentine’s Day, Sonia ❤️💘💞💓</h1>
+  <p>You make my world brighter every single day 💕🌹💖.</p>
+
+  <div class="button-container">
+    <p>Will you be my Valentine? 💌💝</p>
+    <button onclick="valentineChoice('yes')">Yes 💖</button>
+    <button onclick="valentineChoice('no')">No 💔</button>
+  </div>
+
+  <div class="message" id="message"></div>
+
+  <nav id="features">
+    <a href="letter.html">Our Story 📖</a>
+    <a href="gallery.html">Gallery 📸</a>
+    <a href="story.html">Love Letter 💌</a>
+  </nav>
+
+  <div class="heart">💖💞💘💓💝</div>
+
+  <script>
+    function valentineChoice(choice) {
+      const messageDiv = document.getElementById('message');
+      const features = document.getElementById('features');
+
+      if (choice === 'yes') {
+        messageDiv.textContent = "Thank you Sonia, Beltah Loves you ❤️💖💘💝";
+        features.style.display = "block";
+      } else {
+        window.location.href = "invalid.html"; // redirect to invalid page
+      }
+    }
+  </script>
+</body>
+</html>

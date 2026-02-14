@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Best Memories</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #000;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 20px;
+      font-size: 2.2em;
+      text-shadow: 2px 2px 8px #fff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .memory {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .memory:hover {
+      transform: scale(1.05);
+    }
+
+    .memory img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #ff4081;
+    }
+
+    .caption {
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+      padding: 12px 25px;
+      background: #ff4081;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+      width: fit-content;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    a:hover {
+      background: #f50057;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2>💖 Our Sweetest Memories 💖</h2>
+
+  <div class="gallery">
+    <div class="memory">
+      <img src="https://files.catbox.moe/ah7c8w.jpeg" alt="First Meeting">
+      <div class="caption">✨ The Footbridge in Nairobi – Where It All Began</div>
+    </div>
+    <div class="memory">
+      <img src="https://files.catbox.moe/rho33d.jpeg" alt="First Date">
+      <div class="caption">🌹 Our First Date – Smiles & Laughter</div>
+    </div>
+    <div class="memory">
+      <img src="https://files.catbox.moe/yb5qcu.jpeg" alt="Special Trip">
+      <div class="caption">🏞️ A Special Trip – Exploring Together</div>
+    </div>
+    <div class="memory">
+      <img src="https://files.catbox.moe/2lk3ys.jpg" alt="Celebration">
+      <div class="caption">🎉 Celebrating Milestones – Joyful Moments</div>
+    </div>
+    <div class="memory">
+      <img src="https://files.catbox.moe/dzqs52.jpg" alt="Dreams">
+      <div class="caption">💍 Building Dreams – Our Future Together</div>
+    </div>
+  </div>
+
+  <a href="index.html">🏠 Back Home</a>
+</body>
+</html>
